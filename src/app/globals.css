@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── The Modern Architect ── */
+  --color-charcoal:       #3c3f52;
+  --color-charcoal-dark:  #24273a;
+  --color-charcoal-light: #565a70;
+  --color-rose:           #c9a49b;
+  --color-rose-light:     #dfc5be;
+  --color-rose-dark:      #a88070;
+  --color-cream:          #f5f3ef;
+  --color-smoke:          #e8e4de;
+  --color-mist:           #f0ede8;
+  --color-gray-mid:       #9b9896;
+  --color-gray-warm:      #6b6661;
+  --color-ink:            #1e2028;
+
+  /* Typography */
+  --font-sans:   var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-serif:  var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-mono:   "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f3ef;
+  color: #1e2028;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #c9a49b;
+  color: #f5f3ef;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
