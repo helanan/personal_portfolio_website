@@ -267,7 +267,7 @@ export default function ContactPage() {
                   </span>
                 </a>
                 <a
-                  href="https://calendly.com"
+                  href="https://calendly.com/helanan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group"
