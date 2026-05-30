@@ -40,3 +40,40 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
 }
+
+/* ── Print / PDF styles ── */
+@media print {
+  @page {
+    margin: 0.65in 0.75in;
+    size: letter;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  header,
+  footer {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #1e2028 !important;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .print-break {
+    page-break-before: always;
+  }
+}
