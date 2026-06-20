@@ -61,7 +61,7 @@ export const services: Service[] = [
   },
   {
     id: "5",
-    title: "Data Strategy Consulting",
+    title: "Data Strategy Advisory",
     description:
       "Strategic guidance for data leaders: architecture reviews, technology selection, roadmap planning, and capability building for your team.",
     features: [
