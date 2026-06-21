@@ -18,9 +18,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Helana Nosratbakhsh | Data Engineer & Consultant",
+  title: "Helana Nosratbakhsh | Data Engineer & Advisor",
   description:
-    "Senior data engineer specializing in scalable data pipelines, cloud data warehouses, and ML infrastructure. Available for consulting engagements.",
+    "Senior data engineer specializing in scalable data pipelines, cloud data warehouses, and ML infrastructure. Available for advisory engagements.",
   openGraph: {
     title: "Helana Nosratbakhsh | Data Engineer",
     description:

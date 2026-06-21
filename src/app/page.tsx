@@ -5,6 +5,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { services } from "@/data/services";
 import { techStack } from "@/data/techStack";
 import HeadshotImage from "@/components/HeadshotImage";
+import ClientCarousel from "@/components/ClientCarousel";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -28,7 +29,7 @@ function Hero() {
             <div className="flex items-center gap-3 mb-7">
               <div className="w-8 h-px bg-rose shrink-0" />
               <span className="text-[10px] font-sans uppercase tracking-widest text-rose">
-                Data Engineer &amp; Consultant
+                Data Engineer &amp; Advisor
               </span>
             </div>
 
@@ -41,7 +42,7 @@ function Hero() {
             <p className="font-sans text-base text-gray-warm leading-relaxed max-w-md mb-10">
               I build the data infrastructure that powers modern businesses —
               from real-time pipelines to cloud warehouses to ML platforms.
-              Available for consulting engagements and fractional data leadership.
+              Available for advisory engagements and fractional data leadership.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -391,7 +392,7 @@ function ContactCTA() {
             href="/contact"
             className="inline-flex items-center justify-center px-8 py-4 bg-rose text-cream text-sm font-sans tracking-wide hover:bg-rose-dark transition-colors duration-300 group"
           >
-            Schedule a Consultation
+            Schedule a Call
             <ArrowRight
               size={15}
               className="ml-2 group-hover:translate-x-1 transition-transform"
@@ -414,6 +415,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ClientCarousel />
       <div className="h-px bg-smoke" />
       <About />
       <div className="h-px bg-smoke" />

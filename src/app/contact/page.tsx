@@ -151,7 +151,7 @@ export default function ContactPage() {
                       <option>Cloud Data Warehouse</option>
                       <option>ML Data Infrastructure</option>
                       <option>Analytics Engineering</option>
-                      <option>Data Strategy Consulting</option>
+                      <option>Data Strategy Advisory</option>
                       <option>Fractional Data Lead</option>
                       <option>Other / Not sure yet</option>
                     </select>

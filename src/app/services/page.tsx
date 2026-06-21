@@ -5,7 +5,7 @@ import { services } from "@/data/services";
 export const metadata = {
   title: "Services | Helana Nosratbakhsh",
   description:
-    "Data engineering consulting services: pipelines, cloud warehouses, ML infrastructure, analytics engineering, and fractional data leadership.",
+    "Data engineering advisory services: pipelines, cloud warehouses, ML infrastructure, analytics engineering, and fractional data leadership.",
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -171,7 +171,7 @@ export default function ServicesPage() {
             href="/contact"
             className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-rose text-cream text-sm font-sans tracking-wide hover:bg-rose-dark transition-colors duration-300 group"
           >
-            Schedule a Consultation
+            Schedule a Call
             <ArrowRight
               size={15}
               className="group-hover:translate-x-1 transition-transform"

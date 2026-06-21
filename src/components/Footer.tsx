@@ -22,7 +22,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-sans text-sm leading-relaxed text-cream/50 max-w-xs mb-6">
-              Data Engineer & Consultant specializing in scalable pipelines,
+              Data Engineer & Advisor specializing in scalable pipelines,
               cloud data warehouses, and ML infrastructure.
             </p>
             <div className="w-8 h-px bg-rose" />
@@ -91,7 +91,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Helana Nosratbakhsh. All rights reserved.
           </p>
           <p className="font-sans text-xs text-cream/30">
-            Available for consulting engagements
+            Available for advisory engagements
           </p>
         </div>
       </div>
