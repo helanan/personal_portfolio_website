@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40">
+  <!-- Small tractor wheel motif -->
+  <circle cx="8" cy="28" r="7" fill="none" stroke="#c9a49b" stroke-width="1.5"/>
+  <circle cx="8" cy="28" r="2.5" fill="#c9a49b"/>
+  <circle cx="20" cy="30" r="5" fill="none" stroke="#3c3f52" stroke-width="1.5"/>
+  <circle cx="20" cy="30" r="1.5" fill="#3c3f52"/>
+  <text x="32" y="22" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#3c3f52" letter-spacing="1.5">TRACTOR SUPPLY</text>
+  <text x="32" y="35" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="400" fill="#9b9896" letter-spacing="2.5">COMPANY</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 40" width="110" height="40">
+  <!-- X with rose accent lines -->
+  <line x1="0" y1="8" x2="16" y2="32" stroke="#c9a49b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="16" y1="8" x2="0" y2="32" stroke="#3c3f52" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="24" y="30" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#3c3f52" letter-spacing="3">SOLIS</text>
+</svg>

@@ -12,14 +12,14 @@ import Image from "next/image";
   ─────────────────────────────────────────────────────────
 */
 const clients: { name: string; logo?: string }[] = [
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
+  { name: "R1 RCM",                    logo: "/images/logos/r1rcm.svg" },
+  { name: "XSOLIS",                    logo: "/images/logos/xsolis.svg" },
+  { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.svg" },
+  { name: "Nashville Software School", logo: "/images/logos/nss.svg" },
+  { name: "Emma / Marigold",           logo: "/images/logos/emma.svg" },
+  { name: "Listrak",                   logo: "/images/logos/listrak.svg" },
+  { name: "The Judge Group",           logo: "/images/logos/judge-group.svg" },
+  { name: "Day & Zimmermann",          logo: "/images/logos/day-zimmermann.svg" },
 ];
 
 export default function ClientCarousel() {
@@ -33,7 +33,7 @@ export default function ClientCarousel() {
         <div className="flex items-center gap-3">
           <div className="w-8 h-px bg-rose shrink-0" />
           <span className="text-[10px] font-sans uppercase tracking-widest text-gray-mid">
-            Trusted By
+            Where I&apos;ve Worked
           </span>
         </div>
       </div>

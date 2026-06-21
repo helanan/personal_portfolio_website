@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 40" width="175" height="40">
+  <!-- D&Z monogram badge -->
+  <rect x="0" y="6" width="32" height="28" fill="none" stroke="#3c3f52" stroke-width="1.5"/>
+  <text x="4" y="28" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#3c3f52">D</text>
+  <text x="16" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="10" font-weight="400" fill="#c9a49b">&amp;</text>
+  <text x="19" y="32" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#3c3f52">Z</text>
+  <text x="40" y="21" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="600" fill="#3c3f52" letter-spacing="1">DAY &amp; ZIMMERMANN</text>
+  <line x1="40" y1="25" x2="170" y2="25" stroke="#e8e4de" stroke-width="0.75"/>
+  <text x="40" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="400" fill="#9b9896" letter-spacing="1.5">SINCE 1901</text>
+</svg>
