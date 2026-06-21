@@ -72,7 +72,7 @@ function Hero() {
               <HeadshotImage className="w-64 h-80 sm:w-72 sm:h-96 lg:w-80 lg:h-[460px]" />
               <div className="absolute -bottom-5 -right-5 bg-charcoal text-cream p-5 hidden sm:block">
                 <div className="text-3xl font-serif font-light text-rose mb-0.5">
-                  5+
+                  8+
                 </div>
                 <div className="text-[10px] font-sans uppercase tracking-widest text-cream/60">
                   Years Experience
@@ -89,7 +89,7 @@ function Hero() {
 /* ── About ── */
 function About() {
   const stats = [
-    { value: "5+", label: "Years Engineering" },
+    { value: "8+", label: "Years Engineering" },
     { value: "20+", label: "Projects Delivered" },
     { value: "3", label: "Industry Verticals" },
   ];
@@ -109,18 +109,19 @@ function About() {
 
           <div>
             <p className="font-sans text-base text-gray-warm leading-relaxed mb-5">
-              I&apos;m a Senior Data Engineer with over five years of experience
-              designing and building production data systems at scale. My work
-              spans e-commerce, healthcare, and fintech — industries where the
+              I&apos;m a Senior Data Engineer with over 8 years of experience
+              designing, building, and scaling enterprise-grade data platforms.
+              My work spans healthcare, retail, and SaaS — industries where the
               cost of bad data is measured in real business outcomes.
             </p>
             <p className="font-sans text-base text-gray-warm leading-relaxed mb-12">
-              I specialize in turning chaotic, legacy data environments into
-              clean, reliable infrastructure that data scientists and analysts
-              can actually trust. Whether that means migrating a decade-old
-              warehouse to the cloud, building a real-time streaming pipeline,
-              or implementing a feature store for a growing ML team — I design
-              for both immediate impact and long-term maintainability.
+              I specialize in ERP and CRM integrations, Snowflake-native
+              pipelines, and Data Vault 2.0 implementations — bridging the gap
+              between complex business requirements and highly technical
+              engineering. Whether that means restoring revenue reporting
+              accuracy, migrating a legacy warehouse to the cloud, or building
+              ML data infrastructure, I design for both immediate impact and
+              long-term reliability.
             </p>
 
             <div className="grid grid-cols-3 gap-8">

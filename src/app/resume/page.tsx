@@ -3,10 +3,9 @@ import PrintButton from "@/components/PrintButton";
 export const metadata = {
   title: "Résumé | Helana Nosratbakhsh",
   description:
-    "Résumé of Helana Nosratbakhsh — Senior Data Engineer & Consultant.",
+    "Résumé of Helana Nosratbakhsh — Senior Data Engineer & Advisor.",
 };
 
-/* ── Reusable layout pieces ── */
 function Section({
   title,
   children,
@@ -115,7 +114,6 @@ function Project({
   );
 }
 
-/* ── Page ── */
 export default function ResumePage() {
   return (
     <div className="bg-cream min-h-screen">
@@ -138,14 +136,14 @@ export default function ResumePage() {
             Helana Nosratbakhsh
           </h1>
           <p className="font-sans text-base text-rose tracking-wide mb-5">
-            Senior Data Engineer &amp; Consultant
+            Senior Data Engineer &amp; Advisor
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
             {[
+              { label: "Phone", value: "267-443-8860", href: "tel:2674438860" },
               { label: "Email", value: "helanan@gmail.com", href: "mailto:helanan@gmail.com" },
               { label: "LinkedIn", value: "linkedin.com/in/helananosrat", href: "https://www.linkedin.com/in/helananosrat" },
               { label: "GitHub", value: "github.com/helanan", href: "https://github.com/helanan" },
-              { label: "Calendar", value: "calendly.com/helanan", href: "https://calendly.com/helanan" },
             ].map((item) => (
               <a
                 key={item.label}
@@ -166,57 +164,98 @@ export default function ResumePage() {
         {/* Summary */}
         <Section title="Summary">
           <p className="font-sans text-sm text-gray-warm leading-relaxed max-w-3xl">
-            Senior Data Engineer with 5+ years of experience designing and delivering
-            production-grade data infrastructure across e-commerce, healthcare, and
-            fintech. Specializes in real-time streaming pipelines, cloud data warehouse
-            migrations, and ML feature infrastructure. Available for project-based
-            consulting engagements and fractional data leadership roles.
+            Senior Data Engineer with over 8 years of experience designing, building, and scaling
+            enterprise-grade data platforms. Specialized in orchestrating complex ERP and CRM
+            integrations, Snowflake-native pipelines, and Data Vault 2.0 implementations.
+            Recognized for bridging the gap between business requirements and highly technical
+            data engineering — successfully migrating legacy environments and validating
+            massive-scale enterprise data to deliver certified, analytics-ready products that
+            empower data science, reporting, and operational efficiency.
           </p>
         </Section>
 
         {/* Experience */}
         <Section title="Experience">
-          {/*
-            ─────────────────────────────────────────────────────
-            TODO: Replace these placeholder entries with your
-            actual work history. Each <Role> takes:
-              title    — your job title
-              company  — employer name
-              period   — e.g. "Jan 2023 – Present"
-              location — e.g. "Remote" or "San Francisco, CA"
-              bullets  — array of achievement strings
-            ─────────────────────────────────────────────────────
-          */}
           <Role
             title="Senior Data Engineer"
-            company="[Your Most Recent Company]"
-            period="[Start] – Present"
-            location="[Location]"
+            company="R1 RCM"
+            period="March 2024 – Present"
+            location="Philadelphia, PA (Remote)"
             bullets={[
-              "Replace this bullet with your most impactful achievement — quantify it if possible (e.g. reduced pipeline latency by X%).",
-              "Describe a system you owned or built from scratch.",
-              "Mention a cross-functional collaboration or leadership contribution.",
+              "Restored $47.8M in combined monthly revenue reporting accuracy by leading cross-team alignment and resolving systemic data normalization inconsistencies across 1,247 healthcare facilities.",
+              "Spearheaded the implementation of scalable Data Vault 2.0 architectures in Snowflake, orchestrating complex ETL/ELT pipelines across Raw, Refined, and Data Product layers using dbt and Apache Airflow.",
+              "Optimized warehouse cost and performance through rigorous consumption monitoring and query tuning, successfully resolving multi-hour query timeouts and improving infrastructure efficiency.",
+              "Partnered with Data Governance and Analytics teams to deliver certified data products, ensuring documented quality SLAs, lineage, and adherence to enterprise data observability best practices.",
             ]}
           />
           <Role
-            title="Data Engineer"
-            company="[Previous Company]"
-            period="[Start] – [End]"
-            location="[Location]"
+            title="Data Engineer II / ETL Developer II"
+            company="XSOLIS"
+            period="2020 – March 2024"
+            location="Philadelphia, PA (Remote)"
             bullets={[
-              "Replace with a key achievement from this role.",
-              "Mention technologies and scale — rows per day, TB of data, number of tables, etc.",
-              "Include any mentorship, process improvements, or tooling you introduced.",
+              "Accelerated enterprise data delivery for data science and clinical operations by engineering robust Python and SQL pipelines, supporting the deployment of advanced predictive and deep learning models.",
+              "Optimized high-volume data extraction and Redshift enterprise data warehouse migrations by designing and scheduling interval-based SQL stored procedures from production databases.",
+              "Enhanced executive visibility and clinical application performance by developing interactive Power BI semantic models and automated reporting dashboards.",
+              "Secured enterprise data assets by authoring comprehensive source control documentation, integrating strict HITRUST compliance policies directly into development workflows.",
             ]}
           />
           <Role
-            title="Data Analyst / Junior Data Engineer"
-            company="[Earlier Company]"
-            period="[Start] – [End]"
-            location="[Location]"
+            title="Developer — Data Integration"
+            company="Tractor Supply Company"
+            period="August 2017 – February 2020"
+            location="Nashville, TN"
             bullets={[
-              "Replace with an early-career achievement.",
-              "Describe how you transitioned from analysis into engineering.",
+              "Engineered Talend data integration jobs to synchronize and validate SAP ERP Item Master tables against enterprise Netezza data warehouses, achieving strict data consistency requirements for downstream analytics.",
+              "Translated enterprise business needs into technical requirements, collaborating closely with business analysts to design logical and physical dimensional models for self-service reporting.",
+              "Supported major promotional marketing initiatives by writing Java and SQL pipelines to transform semi-structured XML customer data into filtered, analytics-ready tables.",
+            ]}
+          />
+          <Role
+            title="Junior Full Stack Software Developer"
+            company="Nashville Software School"
+            period="July 2016 – June 2017"
+            location="Nashville, TN"
+            bullets={[
+              "Delivered production-quality code by completing an immersive software development program focused on full-stack application development, databases, REST APIs, and object-oriented programming.",
+            ]}
+          />
+          <Role
+            title="Database Analyst & Enterprise Growth Strategist"
+            company="Emma / Marigold"
+            period="2015 – 2017"
+            location="Nashville, TN"
+            bullets={[
+              "Maximized e-commerce and digital strategy goals for CEOs and CMOs by delivering expert consultative strategy and database analysis for the Emma SaaS platform.",
+              "Expanded the retail market pipeline and bridged the gap between sales and engineering by targeting ideal client profiles across the university, agency, and retail sectors.",
+            ]}
+          />
+          <Role
+            title="Database Analyst & Retail Enterprise Growth Strategist"
+            company="Listrak"
+            period="January 2014 – December 2014"
+            location="Greater Philadelphia Area"
+            bullets={[
+              "Optimized sales pipeline efficiency by engineering custom Salesforce data extraction queries and generating analytics reports to drive strategic decision-making.",
+              "Accelerated enterprise client acquisition by conducting technical stack analyses (using Datanyze and builtWith) to map out scalable omni-channel integration strategies.",
+            ]}
+          />
+          <Role
+            title="IT Recruiter and Account Executive"
+            company="The Judge Group"
+            period="October 2014 – 2015"
+            location="Conshohocken, PA"
+            bullets={[
+              "Executed comprehensive talent acquisition strategies for large hiring initiatives by facilitating stakeholder management with senior clients and vendors.",
+            ]}
+          />
+          <Role
+            title="Pharmaceutical Account Manager"
+            company="Day & Zimmerman"
+            period="May 2013 – October 2014"
+            location="Philadelphia, PA"
+            bullets={[
+              "Streamlined recruitment and managed large national pharmaceutical accounts across the R&D, Clinical, and IT sectors.",
             ]}
           />
         </Section>
@@ -259,16 +298,13 @@ export default function ResumePage() {
         <Section title="Technical Skills">
           <div className="space-y-2.5">
             {[
-              { cat: "Languages", items: "Python, SQL, Scala, Bash" },
-              { cat: "Processing", items: "Apache Spark, Apache Kafka, dbt, Apache Beam, Pandas, Polars" },
-              { cat: "Orchestration", items: "Apache Airflow, Prefect, Dagster" },
-              { cat: "Data Warehouses", items: "Snowflake, BigQuery, Amazon Redshift, Delta Lake, Apache Iceberg" },
-              { cat: "Cloud", items: "AWS (S3, Glue, EMR, EKS, Redshift), Google Cloud Platform, Azure" },
-              { cat: "Infrastructure", items: "Terraform, Docker, Kubernetes, GitHub Actions" },
-              { cat: "Visualization", items: "Looker, Tableau, Metabase, Evidence" },
+              { cat: "Engineering & Modeling", items: "Data Vault 2.0, Dimensional Modeling, Star Schemas, ERP System Integration (SAP), Master Data Validation, Historical Backfills" },
+              { cat: "Integration & Pipelines", items: "SQL, Python, Java, Talend, dbt Cloud/Core, Apache Airflow, ETL/ELT" },
+              { cat: "Cloud & Operations", items: "Snowflake (Streams, Tasks, Dynamic Tables), AWS (EC2, S3, Glue, Lambda), Kubernetes Pod Operators, CI/CD" },
+              { cat: "Quality & Strategy", items: "Data Contracts, Regression Testing, Lineage Tracking, Stakeholder Management, Agile/Scrum" },
             ].map(({ cat, items }) => (
               <div key={cat} className="flex flex-col sm:flex-row sm:gap-6">
-                <div className="w-32 shrink-0">
+                <div className="w-40 shrink-0">
                   <span className="font-sans text-[10px] uppercase tracking-widest text-gray-mid">
                     {cat}
                   </span>
@@ -281,52 +317,35 @@ export default function ResumePage() {
 
         {/* Education */}
         <Section title="Education">
-          {/*
-            ─────────────────────────────────────────────
-            TODO: Replace with your actual degree(s).
-            ─────────────────────────────────────────────
-          */}
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
-            <div>
-              <span className="font-serif text-lg text-charcoal">
-                [Degree] in [Field of Study]
-              </span>
-              <span className="font-sans text-sm text-gray-warm mx-2">—</span>
-              <span className="font-sans text-sm text-charcoal">
-                [University Name]
-              </span>
-            </div>
-            <span className="font-sans text-xs text-gray-mid shrink-0">
-              [Year]
-            </span>
-          </div>
-        </Section>
-
-        {/* Certifications — optional, remove section if not applicable */}
-        <Section title="Certifications">
-          {/*
-            ─────────────────────────────────────────────
-            TODO: Add your certifications, or delete this
-            section entirely if not applicable.
-            Example entries shown below.
-            ─────────────────────────────────────────────
-          */}
-          <div className="space-y-2">
-            {[
-              { name: "[Certification Name]", issuer: "[Issuing Body]", year: "[Year]" },
-              { name: "[Certification Name]", issuer: "[Issuing Body]", year: "[Year]" },
-            ].map((cert, i) => (
-              <div key={i} className="flex items-baseline justify-between">
-                <span className="font-sans text-sm text-gray-warm">
-                  {cert.name}
-                  <span className="text-gray-mid mx-1.5">·</span>
-                  {cert.issuer}
+          <div className="space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+              <div>
+                <span className="font-serif text-lg text-charcoal">
+                  Bachelor of Science in Corporate Communication
                 </span>
-                <span className="font-sans text-xs text-gray-mid shrink-0">
-                  {cert.year}
+                <span className="font-sans text-sm text-gray-warm mx-2">—</span>
+                <span className="font-sans text-sm text-charcoal">
+                  Drexel University
                 </span>
               </div>
-            ))}
+              <span className="font-sans text-xs text-gray-mid shrink-0">
+                Minor in Music
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+              <div>
+                <span className="font-serif text-lg text-charcoal">
+                  Junior Developer Bootcamp
+                </span>
+                <span className="font-sans text-sm text-gray-warm mx-2">—</span>
+                <span className="font-sans text-sm text-charcoal">
+                  Nashville Software School
+                </span>
+              </div>
+              <span className="font-sans text-xs text-gray-mid shrink-0">
+                Front-End &amp; Back-End Development
+              </span>
+            </div>
           </div>
         </Section>
 
