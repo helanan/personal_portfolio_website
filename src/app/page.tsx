@@ -109,7 +109,7 @@ function About() {
 
           <div>
             <p className="font-sans text-base text-gray-warm leading-relaxed mb-5">
-              I&apos;m a Senior Data Engineer with over five years of experience
+              I&apos;m a Senior Data Engineer with over 9 years of experience
               designing and building production data systems at scale. My work
               spans e-commerce, healthcare, and fintech — industries where the
               cost of bad data is measured in real business outcomes.
