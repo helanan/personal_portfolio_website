@@ -1,17 +1,6 @@
 import Image from "next/image";
 
-/*
-  ── Client logos ──────────────────────────────────────────
-  Replace each entry with your actual clients.
-
-  Text-only entry:
-    { name: "Company Name" }
-
-  With logo image (add file to /public/images/logos/):
-    { name: "Company Name", logo: "/images/logos/company.svg" }
-  ─────────────────────────────────────────────────────────
-*/
-const clients: { name: string; logo?: string }[] = [
+export const employers: { name: string; logo?: string }[] = [
   { name: "R1 RCM",                    logo: "/images/logos/r1rcm.svg" },
   { name: "XSOLIS",                    logo: "/images/logos/xsolis.svg" },
   { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.svg" },
@@ -22,23 +11,47 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Day & Zimmermann",          logo: "/images/logos/day-zimmermann.svg" },
 ];
 
-export default function ClientCarousel() {
-  // Double the list so the marquee loops seamlessly
-  const doubled = [...clients, ...clients];
+// Add more clients here as you complete your full list
+export const collaborators: { name: string; logo?: string }[] = [
+  { name: "CBIZ",                        logo: "/images/logos/cbiz.svg" },
+  { name: "Ron Jaworski",                logo: "/images/logos/ron-jaworski.svg" },
+  { name: "McKesson Health Solutions",   logo: "/images/logos/mckesson.svg" },
+  { name: "Stratford Friends School",    logo: "/images/logos/stratford-friends.svg" },
+  { name: "Nashville Software School",   logo: "/images/logos/nss.svg" },
+  { name: "The Drexel Triangle",         logo: "/images/logos/drexel-triangle.svg" },
+  { name: "Premier Marketing Group",     logo: "/images/logos/premier-marketing.svg" },
+  { name: "Range Records",              logo: "/images/logos/range-records.svg" },
+  { name: "Quaker City Mercantile",      logo: "/images/logos/quaker-city.svg" },
+  { name: "Raven and Whale Gallery",     logo: "/images/logos/raven-whale.svg" },
+  { name: "Miller High Life",            logo: "/images/logos/miller-high-life.svg" },
+  { name: "Art In the Age",             logo: "/images/logos/art-in-age.svg" },
+  { name: "Framing Hanley",             logo: "/images/logos/framing-hanley.svg" },
+];
+
+interface CarouselProps {
+  items: { name: string; logo?: string }[];
+  label: string;
+  direction?: "left" | "right";
+}
+
+export default function ClientCarousel({
+  items,
+  label,
+  direction = "left",
+}: CarouselProps) {
+  const doubled = [...items, ...items];
 
   return (
-    <section className="py-12 bg-smoke">
-      {/* Label */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
+    <div className="py-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-6">
         <div className="flex items-center gap-3">
           <div className="w-8 h-px bg-rose shrink-0" />
           <span className="text-[10px] font-sans uppercase tracking-widest text-gray-mid">
-            Where I&apos;ve Worked
+            {label}
           </span>
         </div>
       </div>
 
-      {/* Carousel */}
       <div
         className="marquee-wrapper relative overflow-hidden"
         style={{
@@ -48,33 +61,38 @@ export default function ClientCarousel() {
             "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
         }}
       >
-        <div className="marquee-track">
-          {doubled.map((client, i) => (
+        <div
+          className="marquee-track"
+          style={
+            direction === "right"
+              ? { animationDirection: "reverse" }
+              : undefined
+          }
+        >
+          {doubled.map((item, i) => (
             <div
               key={i}
               className="flex items-center shrink-0 px-10"
-              aria-hidden={i >= clients.length ? true : undefined}
+              aria-hidden={i >= items.length ? true : undefined}
             >
-              {client.logo ? (
+              {item.logo ? (
                 <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
+                  src={item.logo}
+                  alt={item.name}
+                  width={140}
                   height={40}
                   className="h-8 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity duration-300"
                 />
               ) : (
                 <span className="font-serif text-xl text-gray-mid/60 hover:text-gray-warm transition-colors duration-300 whitespace-nowrap tracking-wide">
-                  {client.name}
+                  {item.name}
                 </span>
               )}
-
-              {/* Dot separator */}
               <span className="ml-10 w-1 h-1 rounded-full bg-rose/40 shrink-0" />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
