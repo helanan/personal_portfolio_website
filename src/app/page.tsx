@@ -5,7 +5,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { services } from "@/data/services";
 import { techStack } from "@/data/techStack";
 import HeadshotImage from "@/components/HeadshotImage";
-import ClientCarousel, { employers, collaborators } from "@/components/ClientCarousel";
+import ClientCarousel from "@/components/ClientCarousel";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -416,13 +416,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="bg-smoke">
-        <ClientCarousel items={employers} label="Where I've Worked" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="h-px bg-smoke/60" />
-        </div>
-        <ClientCarousel items={collaborators} label="Clients & Collaborators" direction="right" />
-      </section>
+      <ClientCarousel />
       <div className="h-px bg-smoke" />
       <About />
       <div className="h-px bg-smoke" />
