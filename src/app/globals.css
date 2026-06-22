@@ -50,13 +50,16 @@ h1, h2, h3, h4, h5, h6 {
 .marquee-track {
   display: flex;
   width: max-content;
+  animation: marquee 40s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Respect system reduce-motion preference */
+@media (prefers-reduced-motion: reduce) {
   .marquee-track {
-    animation: marquee 40s linear infinite;
-  }
-  .marquee-wrapper:hover .marquee-track {
     animation-play-state: paused;
   }
 }
