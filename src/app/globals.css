@@ -41,11 +41,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
 }
 
-/* ── Logo carousel marquee ── */
-/* Animation is driven by requestAnimationFrame in ClientCarousel.tsx */
-.marquee-track {
+/* ── Logo strip — swipe on mobile, scroll on desktop ── */
+.logo-strip-outer {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar everywhere */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.logo-strip-outer::-webkit-scrollbar {
+  display: none;
+}
+.logo-strip-track {
   display: flex;
   width: max-content;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 /* ── Print / PDF styles ── */
