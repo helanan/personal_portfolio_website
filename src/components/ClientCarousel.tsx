@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const companies: { name: string; logo?: string }[] = [
   { name: "R1 RCM",                    logo: "/images/logos/r1rcm.svg" },
-  { name: "XSOLIS",                    logo: "/images/logos/xsolis.svg" },
-  { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.svg" },
+  { name: "XSOLIS",                    logo: "/images/logos/xsolis.png" },
+  { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.png" },
   { name: "Nashville Software School", logo: "/images/logos/nss.svg" },
-  { name: "Emma / Marigold",           logo: "/images/logos/emma.svg" },
-  { name: "Listrak",                   logo: "/images/logos/listrak.svg" },
-  { name: "The Judge Group",           logo: "/images/logos/judge-group.svg" },
+  { name: "Emma / Marigold",           logo: "/images/logos/emma.png" },
+  { name: "Listrak",                   logo: "/images/logos/listrak.png" },
+  { name: "The Judge Group",           logo: "/images/logos/judge-group.png" },
   { name: "Day & Zimmermann",          logo: "/images/logos/day-zimmermann.svg" },
   { name: "CBIZ",                      logo: "/images/logos/cbiz.svg" },
   { name: "Ron Jaworski",              logo: "/images/logos/ron-jaworski.svg" },
