@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const companies: { name: string; logo?: string }[] = [
-  { name: "R1 RCM",                    logo: "/images/logos/r1rcm.svg" },
+  { name: "R1 RCM",                    logo: "/images/logos/r1rcm.png" },
   { name: "XSOLIS",                    logo: "/images/logos/xsolis.png" },
   { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.png" },
   { name: "Nashville Software School", logo: "/images/logos/nss.svg" },
@@ -9,13 +9,13 @@ const companies: { name: string; logo?: string }[] = [
   { name: "Listrak",                   logo: "/images/logos/listrak.png" },
   { name: "The Judge Group",           logo: "/images/logos/judge-group.png" },
   { name: "Day & Zimmermann",          logo: "/images/logos/day-zimmermann.svg" },
-  { name: "CBIZ",                      logo: "/images/logos/cbiz.svg" },
-  { name: "Ron Jaworski",              logo: "/images/logos/ron-jaworski.svg" },
+  { name: "CBIZ",                      logo: "/images/logos/cbiz.jpg" },
+  { name: "Ron Jaworski Golf",         logo: "/images/logos/ron-jaworski.png" },
   { name: "McKesson Health Solutions", logo: "/images/logos/mckesson.svg" },
   { name: "Stratford Friends School",  logo: "/images/logos/stratford-friends.svg" },
-  { name: "The Drexel Triangle",       logo: "/images/logos/drexel-triangle.svg" },
+  { name: "The Drexel Triangle",       logo: "/images/logos/drexel-triangle.png" },
   { name: "Premier Marketing Group",   logo: "/images/logos/premier-marketing.svg" },
-  { name: "Range Records",             logo: "/images/logos/range-records.svg" },
+  { name: "Range Recording Studio",    logo: "/images/logos/range-recording-studio.jpg" },
   { name: "Quaker City Mercantile",    logo: "/images/logos/quaker-city.svg" },
   { name: "Raven and Whale Gallery",   logo: "/images/logos/raven-whale.svg" },
   { name: "Miller High Life",          logo: "/images/logos/miller-high-life.svg" },
