@@ -42,28 +42,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Logo carousel marquee ── */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
+/* Animation is driven by requestAnimationFrame in ClientCarousel.tsx */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 50s linear infinite;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.marquee-wrapper:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation-play-state: paused;
-  }
 }
 
 /* ── Print / PDF styles ── */

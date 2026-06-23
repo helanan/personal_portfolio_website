@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef, useEffect } from "react";
 
 const employers: { name: string; logo?: string }[] = [
   { name: "R1 RCM",                    logo: "/images/logos/r1rcm.svg" },
@@ -28,22 +31,10 @@ const clients: { name: string; logo?: string }[] = [
   { name: "Framing Hanley",            logo: "/images/logos/framing-hanley.svg" },
 ];
 
-// Separator element rendered between the two groups in the loop
-function Separator({ label }: { label: string }) {
-  return (
-    <div className="flex items-center shrink-0 px-10 gap-3">
-      <div className="w-px h-6 bg-rose/30" />
-      <span className="text-[9px] font-sans uppercase tracking-widest text-rose/60 whitespace-nowrap">
-        {label}
-      </span>
-      <div className="w-px h-6 bg-rose/30" />
-    </div>
-  );
-}
+type Item =
+  | { type: "logo"; name: string; logo?: string }
+  | { type: "sep"; label: string };
 
-type Item = { type: "logo"; name: string; logo?: string } | { type: "sep"; label: string };
-
-// Build one combined track: employers → separator → clients → separator (for seamless loop)
 const track: Item[] = [
   ...employers.map((e) => ({ type: "logo" as const, ...e })),
   { type: "sep", label: "Clients & Collaborators" },
@@ -51,8 +42,36 @@ const track: Item[] = [
   { type: "sep", label: "Employers" },
 ];
 
+const doubled = [...track, ...track];
+
 export default function ClientCarousel() {
-  const doubled = [...track, ...track];
+  const trackRef = useRef<HTMLDivElement>(null);
+  const posRef   = useRef(0);
+  const rafRef   = useRef<number>(0);
+  const pausedRef = useRef(false);
+
+  useEffect(() => {
+    // Respect reduced-motion preference
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const el = trackRef.current;
+    if (!el) return;
+
+    const tick = () => {
+      if (!pausedRef.current) {
+        posRef.current -= 0.6; // px per frame ≈ 36px/s at 60fps
+        const half = el.scrollWidth / 2;
+        if (half > 0 && Math.abs(posRef.current) >= half) {
+          posRef.current = 0;
+        }
+        el.style.transform = `translate3d(${posRef.current}px, 0, 0)`;
+      }
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
 
   return (
     <section className="py-12 bg-smoke">
@@ -70,25 +89,35 @@ export default function ClientCarousel() {
         </span>
       </div>
 
-      {/* Single scrolling strip */}
+      {/* Scrolling strip */}
       <div
-        className="marquee-wrapper relative overflow-hidden"
+        className="relative overflow-hidden"
         style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
+        onMouseEnter={() => { pausedRef.current = true; }}
+        onMouseLeave={() => { pausedRef.current = false; }}
       >
-        <div className="marquee-track">
+        <div
+          ref={trackRef}
+          className="flex w-max"
+          style={{ transform: "translate3d(0, 0, 0)", willChange: "transform" }}
+        >
           {doubled.map((item, i) =>
             item.type === "sep" ? (
-              <Separator key={i} label={item.label} />
+              <div key={i} className="flex items-center shrink-0 px-10 gap-3" aria-hidden="true">
+                <div className="w-px h-6 bg-rose/30" />
+                <span className="text-[9px] font-sans uppercase tracking-widest text-rose/60 whitespace-nowrap">
+                  {item.label}
+                </span>
+                <div className="w-px h-6 bg-rose/30" />
+              </div>
             ) : (
               <div
                 key={i}
                 className="flex items-center shrink-0 px-8"
-                aria-hidden={i >= track.length ? true : undefined}
+                aria-hidden={i >= track.length ? "true" : undefined}
               >
                 {item.logo ? (
                   <Image
