@@ -4,7 +4,7 @@ const companies: { name: string; logo?: string }[] = [
   { name: "R1 RCM",                    logo: "/images/logos/r1rcm.png" },
   { name: "XSOLIS",                    logo: "/images/logos/xsolis.png" },
   { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.png" },
-  { name: "Nashville Software School", logo: "/images/logos/nss.svg" },
+  { name: "Nashville Software School", logo: "/images/logos/nss.jpg" },
   { name: "Emma / Marigold",           logo: "/images/logos/emma.png" },
   { name: "Listrak",                   logo: "/images/logos/listrak.png" },
   { name: "The Judge Group",           logo: "/images/logos/judge-group.png" },
@@ -14,13 +14,13 @@ const companies: { name: string; logo?: string }[] = [
   { name: "McKesson Health Solutions", logo: "/images/logos/mckesson.svg" },
   { name: "Stratford Friends School",  logo: "/images/logos/stratford-friends.png" },
   { name: "The Drexel Triangle",       logo: "/images/logos/drexel-triangle.png" },
-  { name: "Premier Marketing Group",   logo: "/images/logos/premier-marketing.svg" },
+  { name: "Premier Marketing Group",   logo: "/images/logos/premier-marketing.jpg" },
   { name: "Range Recording Studio",    logo: "/images/logos/range-recording-studio.jpg" },
   { name: "Quaker City Mercantile",    logo: "/images/logos/quaker-city.png" },
   { name: "Raven and Whale Gallery",   logo: "/images/logos/raven-whale.svg" },
-  { name: "Miller High Life",          logo: "/images/logos/miller-high-life.svg" },
-  { name: "Art In the Age",            logo: "/images/logos/art-in-age.svg" },
-  { name: "Framing Hanley",            logo: "/images/logos/framing-hanley.svg" },
+  { name: "Miller High Life",          logo: "/images/logos/miller-high-life.png" },
+  { name: "Art In the Age",            logo: "/images/logos/art-in-age.jpg" },
+  { name: "Framing Hanley",            logo: "/images/logos/framing-hanley.jpg" },
 ];
 
 export default function ClientCarousel() {
