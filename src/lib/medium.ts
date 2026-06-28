@@ -62,17 +62,22 @@ export async function getMediumPosts(): Promise<MediumPost[]> {
       const title = extractCdata(item, "title");
       if (!title) continue;
 
-      const linkMatch = item.match(/<link>([^<]+)<\/link>/i) ??
+      const linkMatch =
+        item.match(/<link>([^<]+)<\/link>/i) ??
         item.match(/<guid[^>]*>([^<]+)<\/guid>/i);
       const url = linkMatch ? linkMatch[1].trim() : "";
       if (!url) continue;
 
-      const pubDate = extractCdata(item, "pubDate") || item.match(/<pubDate>([^<]+)<\/pubDate>/i)?.[1]?.trim() || "";
+      const pubDateMatch = item.match(/<pubDate>([^<]+)<\/pubDate>/i);
+      const pubDate = pubDateMatch ? pubDateMatch[1].trim() : "";
+
       const categories = extractAll(item, "category");
 
       const descHtml = extractCdata(item, "description");
       const plainText = stripHtml(descHtml);
-      const excerpt = plainText.slice(0, 200).replace(/\s+\S*$/, "") + (plainText.length > 200 ? "…" : "");
+      const excerpt =
+        plainText.slice(0, 200).replace(/\s+\S*$/, "") +
+        (plainText.length > 200 ? "…" : "");
 
       posts.push({
         id: url,
