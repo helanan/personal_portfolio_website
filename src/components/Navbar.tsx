@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import LogoSVG from "./LogoSVG";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/services", label: "Services" },
@@ -39,16 +39,15 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <LogoSVG size={30} />
-          <div className="hidden sm:block leading-tight">
-            <div className="text-sm font-sans font-semibold text-charcoal tracking-wide">
-              Helana Nosratbakhsh
-            </div>
-            <div className="text-[10px] font-sans text-gray-mid tracking-widest uppercase">
-              Data Engineer
-            </div>
-          </div>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/logo.png"
+            alt="Helana Nosratbakhsh — Data Engineer"
+            width={160}
+            height={60}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
