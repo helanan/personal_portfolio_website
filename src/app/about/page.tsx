@@ -56,7 +56,7 @@ const milestones = [
     label: "Elite Engineering",
     companies: "R1 RCM",
     detail:
-      "Senior Data Engineer II. Restored $47.8M in monthly revenue reporting accuracy across 1,247 healthcare facilities. Architecting Data Vault 2.0 on Snowflake. $125,000 base + 5% bonus.",
+      "Senior Data Engineer II. Restored $47.8M in monthly revenue reporting accuracy across 1,247 healthcare facilities. Architecting Data Vault 2.0 on Snowflake.",
     highlight: true,
   },
 ];
