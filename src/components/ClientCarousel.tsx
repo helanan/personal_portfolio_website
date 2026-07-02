@@ -52,7 +52,7 @@ export default function ClientCarousel() {
                   alt={company.name}
                   width={140}
                   height={40}
-                  className="h-8 w-auto object-contain grayscale opacity-50"
+                  className="h-10 w-32 object-contain grayscale opacity-50"
                 />
               ) : (
                 <span className="font-serif text-xl text-gray-mid/60 whitespace-nowrap tracking-wide">
