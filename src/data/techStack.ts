@@ -5,45 +5,46 @@ export interface Tech {
 
 export const techStack: Tech[] = [
   // Languages
+  { name: "SQL",    category: "Languages" },
   { name: "Python", category: "Languages" },
-  { name: "SQL", category: "Languages" },
-  { name: "Scala", category: "Languages" },
-  { name: "Bash", category: "Languages" },
+  { name: "Java",   category: "Languages" },
 
-  // Data Processing
-  { name: "Apache Spark", category: "Processing" },
-  { name: "Apache Kafka", category: "Processing" },
-  { name: "dbt", category: "Processing" },
-  { name: "Apache Beam", category: "Processing" },
-  { name: "Pandas", category: "Processing" },
-  { name: "Polars", category: "Processing" },
+  // Data Modeling
+  { name: "Data Vault 2.0",       category: "Modeling" },
+  { name: "Dimensional Modeling", category: "Modeling" },
+  { name: "Star Schema",          category: "Modeling" },
+  { name: "ERP Integration (SAP)", category: "Modeling" },
+  { name: "Master Data Validation", category: "Modeling" },
 
-  // Orchestration
-  { name: "Apache Airflow", category: "Orchestration" },
-  { name: "Prefect", category: "Orchestration" },
-  { name: "Dagster", category: "Orchestration" },
+  // Pipelines & Orchestration
+  { name: "dbt Cloud / Core",  category: "Pipelines & Orchestration" },
+  { name: "Apache Airflow",    category: "Pipelines & Orchestration" },
+  { name: "Talend",            category: "Pipelines & Orchestration" },
+  { name: "Apache Kafka",      category: "Pipelines & Orchestration" },
+  { name: "Apache Spark",      category: "Pipelines & Orchestration" },
+  { name: "ETL / ELT",         category: "Pipelines & Orchestration" },
 
-  // Cloud Warehouses
-  { name: "Snowflake", category: "Data Warehouses" },
-  { name: "BigQuery", category: "Data Warehouses" },
-  { name: "Redshift", category: "Data Warehouses" },
-  { name: "Delta Lake", category: "Data Warehouses" },
-  { name: "Apache Iceberg", category: "Data Warehouses" },
+  // Cloud & Warehouses
+  { name: "Snowflake",  category: "Cloud & Warehouses" },
+  { name: "AWS",        category: "Cloud & Warehouses" },
+  { name: "Redshift",   category: "Cloud & Warehouses" },
+  { name: "BigQuery",   category: "Cloud & Warehouses" },
+  { name: "GCP",        category: "Cloud & Warehouses" },
+  { name: "S3 / Glue / Lambda", category: "Cloud & Warehouses" },
 
-  // Cloud Platforms
-  { name: "AWS", category: "Cloud" },
-  { name: "Google Cloud", category: "Cloud" },
-  { name: "Azure", category: "Cloud" },
+  // BI & Reporting
+  { name: "Power BI",   category: "BI & Reporting" },
+  { name: "Salesforce", category: "BI & Reporting" },
 
-  // Infrastructure
-  { name: "Terraform", category: "Infrastructure" },
-  { name: "Docker", category: "Infrastructure" },
-  { name: "Kubernetes", category: "Infrastructure" },
-  { name: "GitHub Actions", category: "Infrastructure" },
+  // Governance & Quality
+  { name: "Data Contracts",      category: "Governance & Quality" },
+  { name: "Lineage Tracking",    category: "Governance & Quality" },
+  { name: "Regression Testing",  category: "Governance & Quality" },
+  { name: "HITRUST Compliance",  category: "Governance & Quality" },
 
-  // Visualization
-  { name: "Looker", category: "Visualization" },
-  { name: "Tableau", category: "Visualization" },
-  { name: "Metabase", category: "Visualization" },
-  { name: "Evidence", category: "Visualization" },
+  // DevOps
+  { name: "Kubernetes", category: "DevOps" },
+  { name: "Docker",     category: "DevOps" },
+  { name: "Terraform",  category: "DevOps" },
+  { name: "CI/CD",      category: "DevOps" },
 ];
