@@ -30,7 +30,7 @@ export default function ClientCarousel() {
         <div className="flex items-center gap-3">
           <div className="w-8 h-px bg-rose shrink-0" />
           <span className="text-[10px] font-sans uppercase tracking-widest text-gray-mid">
-            Companies I&apos;ve Worked With
+            Companies &amp; Brands I&apos;ve Worked With
           </span>
         </div>
       </div>
