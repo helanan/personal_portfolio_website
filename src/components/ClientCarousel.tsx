@@ -25,7 +25,7 @@ const companies: { name: string; logo?: string }[] = [
 
 export default function ClientCarousel() {
   return (
-    <section className="py-12 bg-smoke">
+    <section className="py-12 bg-white border-y border-smoke">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
         <div className="flex items-center gap-3">
           <div className="w-8 h-px bg-rose shrink-0" />
@@ -52,7 +52,7 @@ export default function ClientCarousel() {
                   alt={company.name}
                   width={140}
                   height={40}
-                  className="h-8 w-auto object-contain grayscale opacity-50 mix-blend-multiply"
+                  className="h-8 w-auto object-contain grayscale opacity-50"
                 />
               ) : (
                 <span className="font-serif text-xl text-gray-mid/60 whitespace-nowrap tracking-wide">
