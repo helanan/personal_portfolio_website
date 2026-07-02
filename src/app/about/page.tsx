@@ -271,25 +271,6 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="border border-smoke bg-cream p-7">
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-[10px] font-sans uppercase tracking-widest text-charcoal">
-                    Stressors
-                  </span>
-                  <span className="flex items-center gap-1.5 text-[10px] font-sans uppercase tracking-widest text-amber-600">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
-                    Warning
-                  </span>
-                </div>
-                <ul className="space-y-3">
-                  {stressors.map((s, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-gray-mid shrink-0 mt-px">✗</span>
-                      <span className="font-sans text-sm text-gray-warm">{s}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
