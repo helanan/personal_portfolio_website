@@ -289,8 +289,7 @@ export default function ContactPage() {
                 &ldquo;
               </div>
               <p className="font-sans text-sm text-gray-warm leading-relaxed italic mb-4">
-                The best data infrastructure is the kind nobody notices —
-                because it just works.
+                The industry-wide shift from &ldquo;pipeline construction&rdquo; to &ldquo;data forensics&rdquo; is significant. While many can build a new pipeline, few possess the analytical rigor to perform a Root Cause Analysis that untangles years of logic drift. In high-stakes environments like healthcare RCM, &ldquo;un-breaking&rdquo; historical data is what enables the predictive modeling that drives the business forward.
               </p>
               <div className="text-[10px] font-sans uppercase tracking-widest text-gray-mid">
                 — Helana Nosratbakhsh
