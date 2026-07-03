@@ -1,76 +1,67 @@
 import Image from "next/image";
 
-/*
-  ── Client logos ──────────────────────────────────────────
-  Replace each entry with your actual clients.
-
-  Text-only entry:
-    { name: "Company Name" }
-
-  With logo image (add file to /public/images/logos/):
-    { name: "Company Name", logo: "/images/logos/company.svg" }
-  ─────────────────────────────────────────────────────────
-*/
-const clients: { name: string; logo?: string }[] = [
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
-  { name: "Client Name" },
+const companies: { name: string; logo?: string }[] = [
+  { name: "R1 RCM",                    logo: "/images/logos/r1rcm.png" },
+  { name: "XSOLIS",                    logo: "/images/logos/xsolis.png" },
+  { name: "Tractor Supply Company",    logo: "/images/logos/tractor-supply.png" },
+  { name: "Nashville Software School", logo: "/images/logos/nss.jpg" },
+  { name: "Emma / Marigold",           logo: "/images/logos/emma.png" },
+  { name: "Listrak",                   logo: "/images/logos/listrak.png" },
+  { name: "The Judge Group",           logo: "/images/logos/judge-group.png" },
+  { name: "Day & Zimmermann",          logo: "/images/logos/day-zimmermann.png" },
+  { name: "CBIZ",                      logo: "/images/logos/cbiz.png" },
+  { name: "Ron Jaworski Golf",         logo: "/images/logos/ron-jaworski.png" },
+  { name: "McKesson Health Solutions", logo: "/images/logos/mckesson.svg" },
+  { name: "Stratford Friends School",  logo: "/images/logos/stratford-friends.png" },
+  { name: "The Drexel Triangle",       logo: "/images/logos/drexel-triangle.png" },
+  { name: "Premier Marketing Group",   logo: "/images/logos/premier-marketing.jpg" },
+  { name: "Range Recording Studio",    logo: "/images/logos/range-recording-studio.jpg" },
+  { name: "Quaker City Mercantile",    logo: "/images/logos/quaker-city.png" },
+  { name: "Raven and Whale Gallery",   logo: "/images/logos/raven-whale.svg" },
+  { name: "Miller High Life",          logo: "/images/logos/miller-high-life.png" },
+  { name: "Art In the Age",            logo: "/images/logos/art-in-age.jpg" },
+  { name: "Framing Hanley",            logo: "/images/logos/framing-hanley.jpg" },
 ];
 
 export default function ClientCarousel() {
-  // Double the list so the marquee loops seamlessly
-  const doubled = [...clients, ...clients];
-
   return (
-    <section className="py-12 bg-smoke">
-      {/* Label */}
+    <section className="py-12 bg-white border-y border-smoke">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
         <div className="flex items-center gap-3">
           <div className="w-8 h-px bg-rose shrink-0" />
           <span className="text-[10px] font-sans uppercase tracking-widest text-gray-mid">
-            Trusted By
+            Companies &amp; Brands I&apos;ve Worked With
           </span>
         </div>
       </div>
 
-      {/* Carousel */}
+      {/* Swipeable on mobile, scrollable on desktop */}
       <div
-        className="marquee-wrapper relative overflow-hidden"
+        className="logo-strip-outer"
         style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
         }}
       >
-        <div className="marquee-track">
-          {doubled.map((client, i) => (
-            <div
-              key={i}
-              className="flex items-center shrink-0 px-10"
-              aria-hidden={i >= clients.length ? true : undefined}
-            >
-              {client.logo ? (
+        <div className="logo-strip-track grayscale opacity-50">
+          {companies.map((company, i) => (
+            <div key={i} className="flex items-center shrink-0 px-8">
+              {company.logo ? (
                 <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
+                  src={company.logo}
+                  alt={company.name}
+                  width={140}
                   height={40}
-                  className="h-8 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity duration-300"
+                  className="h-10 w-32 object-contain"
                 />
               ) : (
-                <span className="font-serif text-xl text-gray-mid/60 hover:text-gray-warm transition-colors duration-300 whitespace-nowrap tracking-wide">
-                  {client.name}
+                <span className="font-serif text-xl text-gray-mid/60 whitespace-nowrap tracking-wide">
+                  {company.name}
                 </span>
               )}
-
-              {/* Dot separator */}
-              <span className="ml-10 w-1 h-1 rounded-full bg-rose/40 shrink-0" />
+              {i < companies.length - 1 && (
+                <span className="ml-8 w-1 h-1 rounded-full bg-rose/30 shrink-0" />
+              )}
             </div>
           ))}
         </div>

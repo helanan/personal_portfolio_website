@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import LogoSVG from "./LogoSVG";
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },

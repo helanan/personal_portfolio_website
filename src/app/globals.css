@@ -41,24 +41,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
 }
 
-/* ── Logo carousel marquee ── */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+/* ── Logo strip — swipe on mobile, scroll on desktop ── */
+.logo-strip-outer {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar everywhere */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
-.marquee-track {
+.logo-strip-outer::-webkit-scrollbar {
+  display: none;
+}
+.logo-strip-track {
   display: flex;
   width: max-content;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .marquee-track {
-    animation: marquee 40s linear infinite;
-  }
-  .marquee-wrapper:hover .marquee-track {
-    animation-play-state: paused;
-  }
+  align-items: center;
+  padding: 0 2rem;
 }
 
 /* ── Print / PDF styles ── */

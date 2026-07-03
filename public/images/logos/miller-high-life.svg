@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" width="150" height="40">
+  <!-- 5-point star -->
+  <polygon points="14,2 17,11 26,11 19,17 22,26 14,20 6,26 9,17 2,11 11,11" fill="#c9a49b"/>
+  <text x="34" y="18" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="700" fill="#3c3f52" letter-spacing="1">MILLER</text>
+  <text x="34" y="32" font-family="Georgia, 'Times New Roman', serif" font-size="10" font-weight="400" fill="#6b6661" letter-spacing="1">HIGH LIFE</text>
+</svg>

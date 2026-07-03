@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <!-- Quaker star -->
+  <polygon points="10,2 12,9 19,9 13.5,13.5 16,21 10,17 4,21 6.5,13.5 1,9 8,9" fill="#c9a49b"/>
+  <text x="27" y="20" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" fill="#3c3f52" letter-spacing="1">STRATFORD FRIENDS</text>
+  <text x="27" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="300" fill="#6b6661" letter-spacing="3">SCHOOL</text>
+</svg>

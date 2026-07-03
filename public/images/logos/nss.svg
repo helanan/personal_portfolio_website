@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 40" width="155" height="40">
+  <!-- NSS monogram block -->
+  <rect x="0" y="6" width="28" height="28" fill="#3c3f52"/>
+  <text x="5" y="27" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" fill="#f5f3ef" letter-spacing="-0.5">NSS</text>
+  <text x="36" y="20" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="600" fill="#3c3f52" letter-spacing="0.5">NASHVILLE</text>
+  <text x="36" y="31" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="400" fill="#6b6661" letter-spacing="0.5">Software School</text>
+</svg>
