@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: Props) {
               Helana Nosratbakhsh
             </div>
             <div className="font-sans text-xs text-gray-mid">
-              Data Engineer &amp; Advisor
+              Senior Data Engineer &amp; Advisor
             </div>
           </div>
           <Link
