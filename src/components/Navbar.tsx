@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Résumé" },
+  { href: "/business-card", label: "Business Card" },
   { href: "/contact", label: "Contact" },
 ];
 
